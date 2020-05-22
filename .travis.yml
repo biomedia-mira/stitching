@@ -1,0 +1,18 @@
+# vim ft=yaml
+# After changing this file, check it on:
+#   http://yaml-online-parser.appspot.com/
+
+dist: xenial  # Ubuntu 16.04
+
+install:
+  - sudo apt-get install libboost-all-dev
+
+script:
+  - ./build.sh
+  - ./build/stitching/stitching --help
+
+#after_success:
+#  - ./build/stitching/stitching --help
+
+notifications:
+  email: false
